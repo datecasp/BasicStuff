@@ -10,5 +10,6 @@ namespace BasicStuff.Infra.Context
         }
 
         public DbSet<Usuario> Users { get; set; }
+        public DbSet<Libro> Books { get; set; }
     }
 }

@@ -20,6 +20,10 @@ public class EntitiesMappers<T> where T : class
         {
             return UsuarioMapper.Dto_a_Entity(usuarioDto);
         }
+        if (dto is LibroDto libroDto)
+        {
+            return LibroMapper.Dto_a_Entity(libroDto);
+        }
 
         throw new InvalidOperationException($"No mapper registered for DTO type '{dtoType.FullName}'.");
     }
@@ -36,6 +40,10 @@ public class EntitiesMappers<T> where T : class
         if (entity is Usuario usuario)
         {
             return UsuarioMapper.Entity_a_Dto(usuario) as T;
+        }
+        if (entity is Libro libro)
+        {
+            return LibroMapper.Entity_a_Dto(libro) as T;
         }
 
         throw new InvalidOperationException($"No mapper registered for entity type '{entity.GetType().FullName}'.");

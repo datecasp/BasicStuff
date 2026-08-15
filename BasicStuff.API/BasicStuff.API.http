@@ -1,0 +1,6 @@
+@BasicStuff.API_HostAddress = http://localhost:5213
+
+GET {{BasicStuff.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

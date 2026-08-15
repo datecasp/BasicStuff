@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.12" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.8.0" />
+    
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.19" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BasicStuff.Domain\BasicStuff.Domain.csproj" />
+    <ProjectReference Include="..\BasicStuff.Infra\BasicStuff.Infra.csproj" />
+    <ProjectReference Include="..\BasicStuff.Models\BasicStuff.Models.csproj" />
+  </ItemGroup>
+
+</Project>

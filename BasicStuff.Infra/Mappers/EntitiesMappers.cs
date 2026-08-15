@@ -1,4 +1,7 @@
-﻿namespace BasicStuff.Infra.Mappers;
+﻿using BasicStuff.Models.Dtos;
+using BasicStuff.Models.Models;
+
+namespace BasicStuff.Infra.Mappers;
 public class EntitiesMappers<T> where T : class
 {
     /// <summary>
@@ -13,7 +16,7 @@ public class EntitiesMappers<T> where T : class
         var dtoType = typeof(T);
 
         // Add mappings here as new DTO/entity pairs are introduced
-        if (dto is BasicStuff.Models.Dtos.UsuarioDto usuarioDto)
+        if (dto is UsuarioDto usuarioDto)
         {
             return UsuarioMapper.Dto_a_Entity(usuarioDto);
         }
@@ -30,7 +33,7 @@ public class EntitiesMappers<T> where T : class
         if (entity == null) return null;
 
         // Map entities to DTOs depending on runtime type
-        if (entity is BasicStuff.Models.Models.Usuario usuario)
+        if (entity is Usuario usuario)
         {
             return UsuarioMapper.Entity_a_Dto(usuario) as T;
         }
